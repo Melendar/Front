@@ -186,14 +186,18 @@ class Profile extends State<RegistProfile> {
                                         onPressed: () {
                                           Navigator.pop(context);
                                         },
-                                        child: const Text("취소"),
+                                        child: const Text("취소",
+                                          style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+                                        ),
                                       ),
                                       TextButton(
                                         onPressed: () {
                                           Navigator.pop(context);
                                           _updateNickname();
                                         },
-                                        child: const Text("확인"),
+                                        child: const Text("확인",
+                                          style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+                                        ),
                                       ),
                                     ],
                                   );

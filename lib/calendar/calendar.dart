@@ -158,7 +158,9 @@ class _CalendarState extends State<Calendar> {
                   ),
                   SizedBox(height: 16),
                   ElevatedButton(
-                    child: Text('날짜 선택'),
+                    child: Text('날짜 선택',
+                      style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+                    ),
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.white),
                     onPressed: () async {
@@ -220,11 +222,15 @@ class _CalendarState extends State<Calendar> {
               ),
               actions: <Widget>[
                 TextButton(
-                  child: Text('취소'),
+                  child: Text('취소',
+                    style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+                  ),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
                 TextButton(
-                  child: Text('추가'),
+                  child: Text('추가',
+                  style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+            ),
                   onPressed: () async {
                     if (task.isNotEmpty && selectedGroupId != null) {
                       await _eventService.createEvent(
@@ -371,7 +377,9 @@ class _CalendarState extends State<Calendar> {
               ),
               actions: <Widget>[
                 TextButton(
-                  child: Text("닫기"),
+                  child: Text("닫기",
+            style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+            ),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -437,11 +445,15 @@ class _CalendarState extends State<Calendar> {
           content: Text('정말로 이 일정을 삭제하시겠습니까?'),
           actions: <Widget>[
             TextButton(
-              child: Text('취소'),
+              child: const Text('취소',
+        style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+        ),
               onPressed: () => Navigator.of(context).pop(false),
             ),
             TextButton(
-              child: Text('삭제'),
+              child: const Text('삭제',
+                style: TextStyle(color: Colors.black), // 제목을 흰색으로 설정
+              ),
               onPressed: () => Navigator.of(context).pop(true),
             ),
           ],
