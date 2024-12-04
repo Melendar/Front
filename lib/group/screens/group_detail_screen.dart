@@ -96,8 +96,11 @@ class _GroupDetailScreenState extends State<GroupDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+      backgroundColor: Colors.white, // 배경을
       appBar: AppBar(
+        backgroundColor: Colors.white, // 배경을
         title: Text(_group.name),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -134,6 +137,7 @@ class _GroupDetailScreenState extends State<GroupDetailScreen> {
         ],
       ),
       body: Padding(
+
         padding: const EdgeInsets.all(16.0),
         child: Card(
           shape: RoundedRectangleBorder(
@@ -294,6 +298,7 @@ class _GroupDetailScreenState extends State<GroupDetailScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
+          backgroundColor: Colors.white, // 배경을
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -301,11 +306,11 @@ class _GroupDetailScreenState extends State<GroupDetailScreen> {
           actionsAlignment: MainAxisAlignment.center,
           actionsPadding: EdgeInsets.symmetric(horizontal: 8),
           actions: [
-            OutlinedButton(
+            TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: Text('아니오', style: TextStyle(color: Colors.blue)),
+              child: Text('아니오', style: TextStyle(color: Colors.black)),
             ),
-            ElevatedButton(
+            TextButton(
               onPressed: () async {
                 try {
                   final groupService = GroupService();
@@ -322,7 +327,7 @@ class _GroupDetailScreenState extends State<GroupDetailScreen> {
                   Navigator.of(context).pop(); // 다이얼로그만 닫기
                 }
               },
-              child: Text('네'),
+              child: Text('네', style: TextStyle(color: Colors.black)),
             ),
           ],
         );
@@ -425,9 +430,9 @@ class _AddMemberScreenState extends State<AddMemberScreen> {
                   ),
                 ),
                 SizedBox(width: 8),
-                ElevatedButton(
+                TextButton(
                   onPressed: _searchUser,
-                  child: Text('검색'),
+                  child: Text('검색', style: TextStyle(color: Colors.black)),
                 ),
               ],
             ),

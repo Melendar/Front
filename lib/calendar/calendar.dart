@@ -273,7 +273,7 @@ class _CalendarState extends State<Calendar> {
                 tileColor: Colors.white, // ListTile 배경색 흰색으로 설정
                 title: Text('전체 선택'),
                 trailing: IconButton(
-                  icon: Icon(Icons.select_all),
+                  icon: Icon(Icons.check_box),
                   onPressed: () {
                     userProvider.selectAllGroups();
                     _loadEvents();
